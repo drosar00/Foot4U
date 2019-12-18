@@ -1,0 +1,147 @@
+html {
+  overflow-y:hidden;
+  border-left: #2c3e50 350px solid;
+  border-right: #2c3e50 350px solid;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f39c12;
+}
+/*h1 {
+  margin: 0 0 0.25em;
+}*/
+/*Estilos caja equipo */
+select {
+  outline: 0;
+  appearance: none;
+  border: 0 !important;
+  background: #2c3e50;
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+img {
+
+  width: 300px;
+  height: 300px;
+}
+
+input {
+  outline: 0;
+  appearance: none;
+  border: 0 !important;
+  background: #f39c12;
+  flex: 1;
+  padding: 0 .5em;
+  color: #2c3e50;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#res {
+  margin: 8px;
+  background: #2c3e50;
+  text-align:center;
+  padding: 0 .5em;
+  color: #f39c12;
+  outline: 0;
+  appearance: none;
+  border: 0 !important;
+}
+
+#prx, #pr1, #pr2 {
+  margin: 5px;
+  background: #f39c12;
+  text-align:center;
+  padding: 0 .5em;
+  color: #2c3e50;
+  outline: 0;
+  appearance: none;
+  font-size: 30px;
+
+}
+/* Remove IE arrow */
+/*select::-ms-expand {
+  display: none;
+}*/
+/* Custom Select */
+.select {
+  margin: 2px;
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+  overflow-y: hidden;
+  border: 2px solid #2c3e50;
+}
+
+
+
+.bot {
+  margin: 5px;
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #f39c12;
+  overflow: hidden;
+  border-radius: .25em;
+  overflow-y: hidden;
+  border: 2px solid #2c3e50;
+}
+
+.resultado {
+  margin: 5px;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background:  #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+  overflow-y: hidden;
+  border: 2px solid #2c3e50;
+}
+
+.probabilidades {
+  margin: 5px;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background:  #f39c12;
+  overflow: hidden;
+  border-radius: .25em;
+  overflow-y: hidden;
+
+}
+
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  border-radius: .25em;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}

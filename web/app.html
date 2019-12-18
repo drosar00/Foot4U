@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <title>Foot4j</title>
+        <link rel="icon" type="image/png" href="/images/logo.png" />
+    </head>
+
+    <body>
+
+      <img src="./images/logo.png"/>
+      <div class="select">
+      <select id='local'>
+
+      <option selected disabled>Elegir Equipo Local</option>
+
+      <option value="1">Athletic Club</option>
+
+      <option value="2">FC Barcelona</option>
+
+      <option value="3">Celta de Vigo</option>
+
+      <option value="4">Real Madrid</option>
+
+      <option value="5">Valencia</option>
+
+      <option value="6">Real Sociedad</option>
+
+      <option value="7">Mallorca</option>
+
+      <option value="8">Eibar</option>
+
+      <option value="9">Leganés</option>
+
+      <option value="10">Osasuna</option>
+
+      <option value="11">Villareal</option>
+
+      <option value="12">Granada</option>
+
+      <option value="13">Alavés</option>
+
+      <option value="14">Levante</option>
+
+      <option value="15">RCD Espanyol</option>
+
+      <option value="16">Sevilla FC</option>
+
+      <option value="17">Real Betis</option>
+
+      <option value="18">Real Valladolid</option>
+
+      <option value="19">Atlético de Madrid</option>
+
+      <option value="20">Getafe</option>
+
+      </select>
+    </div>
+
+    <div class="select">
+      <select id="visitante">
+
+      <option selected disabled>Elegir Equipo Visitante</option>
+
+      <option value="1">Athletic Club</option>
+
+      <option value="2">FC Barcelona</option>
+
+      <option value="3">Celta de Vigo</option>
+
+      <option value="4">Real Madrid</option>
+
+      <option value="5">Valencia</option>
+
+      <option value="6">Real Sociedad</option>
+
+      <option value="7">Mallorca</option>
+
+      <option value="8">Eibar</option>
+
+      <option value="9">Leganés</option>
+
+      <option value="10">Osasuna</option>
+
+      <option value="11">Villareal</option>
+
+      <option value="12">Granada</option>
+
+      <option value="13">Alavés</option>
+
+      <option value="14">Levante</option>
+
+      <option value="15">RCD Espanyol</option>
+
+      <option value="16">Sevilla FC</option>
+
+      <option value="17">Real Betis</option>
+
+      <option value="18">Real Valladolid</option>
+
+      <option value="19">Atlético de Madrid</option>
+
+      <option value="20">Getafe</option>
+
+      </select>
+    </div>
+      <div class="bot">
+      <input type="button" onclick="javascript:eel.predict(document.getElementById('local').value,document.getElementById('visitante').value);" value="Obtener Predicción">
+    </div>
+
+
+      <div class="probabilidades", id="pr1"></div>
+        <div class="probabilidades", id="prx"></div>
+          <div class="probabilidades", id="pr2"></div>
+
+          <div class="bot">
+          <input type="button" onclick="javascript:fin();" value="Salir">
+        </div>
+
+    </body>
+    <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+      //document.getElementById('res').style.display = 'none';
+      document.getElementById('pr1').style.display = 'none';
+      document.getElementById('prx').style.display = 'none';
+      document.getElementById('pr2').style.display = 'none';
+
+    eel.expose(say_result_js);               // Expose this function to Python
+    function say_result_js(r,s,t,u) {
+        //document.getElementById('res').style.display = 'block';
+        document.getElementById('pr1').style.display = 'block';
+        document.getElementById('prx').style.display = 'block';
+        document.getElementById('pr2').style.display = 'block';
+        //document.getElementById("res").innerHTML = r;
+        document.getElementById("prx").innerHTML = s;
+        document.getElementById("pr1").innerHTML = t;
+        document.getElementById("pr2").innerHTML = u;
+    }
+    function fin() {
+       window.close();
+    }
+    </script>
+</html>
